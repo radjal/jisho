@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Jisho Inline Lookup Iframe",
-  "version": "1.0",
-  "description": "Inline lookup of Japanese text on Jisho.org using an Iframe, select text and right click menu",
+  "name": "Jisho Inline Lookup (CORS Safe)",
+  "version": "1.1",
+  "description": "Inline Jisho.org lookup using background fetch to avoid CORS issues",
   "permissions": ["contextMenus", "scripting", "activeTab"],
   "background": {
     "service_worker": "background.js"
@@ -13,6 +13,9 @@
       "js": ["content.js"],
       "css": ["styles.css"]
     }
+  ],
+  "host_permissions": [
+    "https://jisho.org/*"
   ],
    "icons": {
     "16": "icon16.png",
