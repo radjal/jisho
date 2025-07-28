@@ -1,9 +1,9 @@
 {
   "manifest_version": 3,
-  "name": "Jisho Inline Lookup (CORS Safe)",
-  "version": "1.1",
-  "description": "Inline Jisho.org lookup using background fetch to avoid CORS issues",
-  "permissions": ["contextMenus", "scripting", "activeTab"],
+  "name": "Jisho Inline + Tab Lookup",
+  "version": "1.2",
+  "description": "Inline and tab-based Japanese word lookup using Jisho.org",
+  "permissions": ["contextMenus", "scripting", "activeTab", "tabs"],
   "background": {
     "service_worker": "background.js"
   },

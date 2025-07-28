@@ -20,7 +20,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 });
 
 function showLoadingPopup(query) {
-  const popup = createPopup(`Searching for “${query}”...`);
+  const popup = createPopup(`Searching for ${query}...`);
   document.body.appendChild(popup);
   fadeIn(popup);
 }
@@ -32,7 +32,7 @@ function showErrorPopup(msg) {
 }
 
 function showResultsPopup(query, data) {
-  const popup = createPopup(`Results for “${query}”`);
+  const popup = createPopup(`Results for ${query}`);
   const body = document.createElement("div");
   body.className = "jisho-results";
 
@@ -71,7 +71,7 @@ function createPopup(titleText) {
   header.textContent = titleText;
 
   const closeBtn = document.createElement("span");
-  closeBtn.textContent = "✖";
+  closeBtn.textContent = "?";
   closeBtn.className = "jisho-close-btn";
   closeBtn.onclick = () => fadeOutAndRemove(popup);
   header.appendChild(closeBtn);
