@@ -1,0 +1,44 @@
+.jisho-inline-popup {
+  position: absolute;
+  /*width: 400px;
+  height: 300px;*/
+  width: 90vw;
+  height: 40vh;
+  max-width: 800px;
+  max-height: 600px;
+  min-height: 20vh;
+  border: 2px solid #ccc;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.jisho-inline-popup.visible {
+  opacity: 1;
+}
+
+.jisho-popup-header {
+  background: #f0f0f0;
+  padding: 8px 10px;
+  font-weight: bold;
+  cursor: move;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.jisho-close-btn {
+  cursor: pointer;
+  font-size: 16px;
+  color: #666;
+}
+
+.jisho-inline-popup iframe {
+  flex-grow: 1;
+  border: none;
+}

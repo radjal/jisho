@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Jisho Inline Lookup Iframe",
+  "version": "1.0",
+  "description": "Inline lookup of Japanese text on Jisho.org using an Iframe, select text and right click menu",
+  "permissions": ["contextMenus", "scripting", "activeTab"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+   "icons": {
+    "16": "icon16.png",
+    "32": "icon32.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
